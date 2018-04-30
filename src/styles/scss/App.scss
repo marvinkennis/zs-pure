@@ -66,7 +66,6 @@ $button-border-radius:68px;
 
 
 
-
 /*System messages */ 
 $warning-color:#FFAB00;
 $error-color:#FF5230;
@@ -83,6 +82,9 @@ ul {
     list-style:none;
 }
 
+input { 
+    font-size:$p-font-size;
+}
 h1 {
     font-size:$h600-font-size;
     font-weight:$h600-font-weight;
@@ -309,8 +311,17 @@ input[type=range] {
     background: #FFFFFF;
     border: 1px solid $primary-color;
     border-radius: 2px;
+    font-size:$p-font-size;
+    padding:8px;
     outline: none !important;
   }
+
+  .zs-text-box:read-only {
+    /* Rectangle 4: */
+
+  border: 1px solid $disabled-color;
+
+}
 
   .zs-text-box:focus {
       border:1px solid $button-focus-border-color;
@@ -320,8 +331,14 @@ input[type=range] {
     border:1px solid $error-color;
   }
 
+  .zs-input-label {
+      display:block;
+      line-height:40px;
+  }
 
-
+  input[type=text] {
+      line-height:100%;
+  }
   .zs-toggle-switch {
     position: relative;
     display: inline-block;

@@ -9,6 +9,9 @@ body {
 ul {
   list-style: none; }
 
+input {
+  font-size: 14px; }
+
 h1 {
   font-size: 36px;
   font-weight: "light";
@@ -198,13 +201,26 @@ input[type=range]::-webkit-slider-runnable-track {
   background: #FFFFFF;
   border: 1px solid #424496;
   border-radius: 2px;
+  font-size: 14px;
+  padding: 8px;
   outline: none !important; }
+
+.zs-text-box:read-only {
+  /* Rectangle 4: */
+  border: 1px solid #E9E9E9; }
 
 .zs-text-box:focus {
   border: 1px solid #6FA9FF; }
 
 .zs-text-box:required {
   border: 1px solid #FF5230; }
+
+.zs-input-label {
+  display: block;
+  line-height: 40px; }
+
+input[type=text] {
+  line-height: 100%; }
 
 .zs-toggle-switch {
   position: relative;

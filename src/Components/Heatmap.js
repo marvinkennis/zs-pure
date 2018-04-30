@@ -2,38 +2,74 @@
 import React, { Component} from 'react';
 import { Icon } from 'react-icons-kit'
 import '../styles/scss/App.css';
-import 'https://cdn.jsdelivr.net/npm/simpleheat@0.4.0/simpleheat.js'
+import '../styles/scss/ModuleOverwrites.css';
 import {ic_file_download} from 'react-icons-kit/md/ic_file_download'
-var ReactHeatmap = require('react-heatmap');
+
+import {XYPlot, XAxis, YAxis, ContourSeries, MarkSeriesCanvas, Borders} from 'react-vis';
+
+
+
 class Heatmap extends Component {
-// Initialize some props
- constructor(props){
-     super(props);
- }
-
-
+  state = {
+    data: [
+      {x: 10, y: 7},
+      {x: 2, y: 11},
+      {x: 3, y: 90},
+      {x: 40, y: 2},
+      {x: 1, y: 7},
+      {x: 2, y: 11},
+      {x: 3, y: 9},
+      {x: 40, y: 2},
+      {x: 1, y: 70},
+      {x: 2, y: 11},
+      {x: 3, y: 9},
+      {x: 40, y: 2},
+      {x: 1, y: 7},
+      {x: 20, y: 11},
+      {x: 3, y: 9},
+      {x: 40, y: 2},
+      {x: 1, y: 7},
+      {x: 2, y: 11},
+      {x: 30, y: 9},
+      {x: 4, y: 20},
+      {x: 1, y: 7},
+      {x: 2, y: 11},
+      {x: 30, y: 9},
+      {x: 4, y: 20},
+    ]
+  }
   render() {
-
-    var data = [[38,20,2],[38,690,3],[38,690,3],[38,690,3],[38,690,3],[38,690,3],[38,690,3],[38,690,3],[38,690,3],[38,690,3],[38,690,3],[38,690,3],[48,30,1]];
-          // set data of [[x, y, value], ...] format
-      heat.data(data);
-
-      // set max data value (1 by default)
-      heat.max(max);
-
-      // add a data point
-      heat.add(point);
-
-      // clear data
-      heat.clear();
+    const {data} = this.state;
     return (
       <div>
+        <XYPlot
+          xDomain={[40, 100]}
+          yDomain={[1.5, 8]}
+          width={600}
+          getX={d => d.waiting}
+          getY={d => d.eruptions}
+          height={300}>
+          <ContourSeries
+            animation
+            className="contour-series-example"
+            style={{
+              stroke: '#125C77',
+              strokeLinejoin: 'round'
+            }}
+            colorRange={[
+              '#79C7E3',
+              '#FF9833'
+            ]}
+            data={data}/>
+          <MarkSeriesCanvas animation data={data} size={1} color={'#125C77'}/>
+          <Borders style={{all: {fill: '#fff'}}}/>
+          <XAxis />
+          <YAxis />
 
-      <canvas id="canvas" width="1000" height="600"></canvas>
+        </XYPlot>
       </div>
     );
   }
 }
-
 
 export default Heatmap;

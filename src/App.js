@@ -9,6 +9,7 @@ import InlineMessage from './Components/InlineMessage';
 import RadioButtonSet from './Components/RadioButtonSet';
 import CheckboxSet from './Components/CheckboxSet';
 import TextArea from './Components/TextArea';
+import TextField from './Components/TextField';
 import Slider from './Components/Slider';
 import Toggle from './Components/Toggle';
 import Cropper from 'react-cropper';
@@ -18,6 +19,7 @@ import './styles/scss/App.css';
 import './styles/scss/ModuleOverwrites.css';
 import Tooltip from './Components/Tooltip';
 import BarGraph from './Components/BarGraph';
+import Heatmap from './Components/Heatmap';
 
 class App extends Component {
   render() {
@@ -35,6 +37,8 @@ class App extends Component {
       <RadioButtonSet></RadioButtonSet>
       <CheckboxSet></CheckboxSet>
       <TextArea></TextArea>
+      <TextField readOnly={"true"}></TextField>
+      <TextField labelText="Heyooooo" infoIcon={true} tooltipMessage={true}></TextField>
       <Toggle></Toggle>
       <SystemMessage messageType="warning" messageText="Yo warning here"></SystemMessage>
       <InlineMessage messageType="error" messageText="Placeholder message text here"></InlineMessage>
