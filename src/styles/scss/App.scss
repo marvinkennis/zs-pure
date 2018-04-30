@@ -1,0 +1,44 @@
+
+/* Brand color definitions - move this to core styling file later*/
+$primary-color: #424496;
+$secondary-color: #6470E7;
+$tertiary-color: #42B3B9;
+$disabled-color: #E9E9E9;
+
+$button-text-color:#FFF;
+
+/*Buttons - move this to _button.scss later*/
+$button-padding: 10px;
+$button-hover-color:#6470E7;
+$button-focus-border-color:#6FA9FF;
+$button-border-radius:68px;
+
+
+/* Text links */ 
+
+.zs-button {
+    background-color:$primary-color;
+    width:100px;
+    border:none;
+    color:$button-text-color;
+    border-radius:$button-border-radius;
+    padding:$button-padding;
+    font-size:10;
+}
+
+.button-secondary {
+    background: #FFFFFF;
+    border: 2px solid #424496;
+    font-size: 14px;
+    color: #000000;
+}
+
+.zs-button:focus {
+border-radius: 68px;
+border: 2px solid $secondary-color;
+outline:none;
+}
+
+.zs-button:hover{
+    background-color:$secondary-color
+}
