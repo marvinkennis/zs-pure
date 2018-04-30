@@ -1,0 +1,78 @@
+.container{
+  display: block;
+  position: relative;
+  margin: 40px;
+  height: auto;
+  width: 500px;
+  padding: 20px;
+}
+
+/**
+ * Checkbox Five
+ */
+.zensors-checkbox {
+    margin: 20px 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.checkbox-label {
+  font-weight: 300;
+  font-size: 1.2em;
+  padding-left: 15px;
+  color: #767676;
+}
+
+/**
+ * Create the box for the checkbox
+ */
+.zensors-checkbox label {
+    cursor: pointer;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border:3px solid #767676;
+}
+
+.zensors-checkbox input[type=checkbox]:checked + label {
+    border:3px solid #424496;
+}
+
+/**
+ * Display the tick inside the checkbox
+ */
+.zensors-checkbox label:after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 7px;
+    background: transparent;
+    top: 2px;
+    left: 0;
+    border: 3px solid #333;
+    border-top: none;
+    border-right: none;
+
+    transform: rotate(-45deg);
+}
+
+/**
+ * Create the hover event of the tick
+ */
+/*.zensors-checkbox label:hover::after {
+    opacity: 0.5;
+}*/
+
+/**
+ * Create the checkbox state for the tick
+ */
+.zensors-checkbox input[type=checkbox]:checked + label:after {
+    opacity: 1;
+    border: 3px solid #424496;
+    border-top: none;
+    border-right: none;
+}
