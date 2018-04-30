@@ -12,6 +12,9 @@
  $line-width:3px;
  $point-offset:-10px;
 
+
+ $graph-line-width:2px; 
+ $graph-reference-line-dash: 5;
  .cropper-container {
     font-size: 0;
     line-height: 0;
@@ -404,6 +407,7 @@
   
   .rv-xy-plot__grid-lines__line {
     stroke: #e6e6e9;
+    stroke-dasharray: $graph-reference-line-dash
   }
   
   .rv-xy-plot__circular-grid-lines__line {
@@ -424,7 +428,7 @@
   .rv-xy-plot__series--line {
     fill: none;
     stroke: #000;
-    stroke-width: 2px;
+    stroke-width: $graph-line-width;
   }
   
   .rv-crosshair {

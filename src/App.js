@@ -17,6 +17,7 @@ import Cropper from 'react-cropper';
 import './styles/scss/App.css';
 import './styles/scss/ModuleOverwrites.css';
 import Tooltip from './Components/Tooltip';
+import BarGraph from './Components/BarGraph';
 
 class App extends Component {
   render() {
@@ -39,6 +40,7 @@ class App extends Component {
       <InlineMessage messageType="error" messageText="Placeholder message text here"></InlineMessage>
       <Footer>
       </Footer>
+      <BarGraph></BarGraph>
       <LineGraph></LineGraph>
       <XYImagePlot></XYImagePlot>
       <Cropper
