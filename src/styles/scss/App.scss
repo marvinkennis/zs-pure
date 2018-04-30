@@ -1,5 +1,53 @@
 
 /* Brand color definitions - move this to core styling file later*/
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+/* Type definitions */
+$primary-typeface:'Rubik', sans-serif;
+$t200-font-size:64px;
+$t200-font-weight:'light';
+$t200-line-height:64px;
+
+$t100-font-size:44px;
+$t100-font-weight:'regular';
+$t100-line-height:48px;
+
+$h600-font-size:36px;
+$h600-font-weight:'light';
+$h600-line-height:45px;
+
+$h500-font-size:24px;
+$h500-font-weight:'light';
+$h500-line-height:30px;
+
+$h400-font-size:20px;
+$h400-font-weight:'light';
+$h400-line-height:25px;
+
+$h300-font-size:18px;
+$h300-font-weight:'regular';
+$h300-line-height:23px;
+
+$h200-font-size:14px;
+$h200-font-weight:'regular';
+$h200-line-height:18px;
+
+$h100-font-size:14px;
+$h100-font-weight:'regular';
+$h100-line-height:16px;
+
+$caption-font-size:12px;
+$caption-font-weight:'regular';
+$caption-line-height:18px;
+
+$legal-font-size:11px;
+$legal-font-weight:'regular';
+$legal-line-height:17px;
+
+$p-font-size:14px;
+$p-font-weight:'light';
+$p-line-height:21px;
+
 
 
 $primary-color: #424496;
@@ -17,7 +65,7 @@ $button-focus-border-color:#6FA9FF;
 $button-border-radius:68px;
 
 
-/* Text links */ 
+
 
 /*System messages */ 
 $warning-color:#FFAB00;
@@ -28,12 +76,41 @@ $information-color: $primary-color;
 
 $page-safe-margins:20px;
 
+body {
+    font-family:$primary-typeface;
+}
 ul {
     list-style:none;
 }
 
+h1 {
+    font-size:$h600-font-size;
+    font-weight:$h600-font-weight;
+    line-height: $h600-line-height;
+}
+
+h2 {
+    font-size:$h500-font-size;
+    font-weight:$h500-font-weight;
+    line-height: $h500-line-height;
+}
+
+h3 {
+    font-size:$h400-font-size;
+    font-weight:$h400-font-weight;
+    line-height: $h400-line-height;
+}
+
+h4 {
+    font-size:$h300-font-size;
+    font-weight:$h300-font-weight;
+    line-height: $h300-line-height;
+}
 p {
     margin:0;
+    font-size:$p-font-size;
+    font-weight:$p-font-weight;
+    line-height: $p-line-height;
     padding:0;
 }
 .zs-button {
@@ -309,4 +386,8 @@ input[type=range] {
 
   .checkhandle{
       background-color:blue;
+  }
+
+  .zs-tooltip {
+      background-color:red;
   }

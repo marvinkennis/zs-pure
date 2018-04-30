@@ -1,12 +1,39 @@
 /* Brand color definitions - move this to core styling file later*/
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+/* Type definitions */
 /*Buttons - move this to _button.scss later*/
-/* Text links */
 /*System messages */
+body {
+  font-family: "Rubik", sans-serif; }
+
 ul {
   list-style: none; }
 
+h1 {
+  font-size: 36px;
+  font-weight: "light";
+  line-height: 45px; }
+
+h2 {
+  font-size: 24px;
+  font-weight: "light";
+  line-height: 30px; }
+
+h3 {
+  font-size: 20px;
+  font-weight: "light";
+  line-height: 25px; }
+
+h4 {
+  font-size: 18px;
+  font-weight: "regular";
+  line-height: 23px; }
+
 p {
   margin: 0;
+  font-size: 14px;
+  font-weight: "light";
+  line-height: 21px;
   padding: 0; }
 
 .zs-button {
@@ -235,5 +262,8 @@ input:checked + .zs-toggle-slider:before {
 
 .checkhandle {
   background-color: blue; }
+
+.zs-tooltip {
+  background-color: red; }
 
 /*# sourceMappingURL=App.css.map */

@@ -16,6 +16,7 @@ import Cropper from 'react-cropper';
 
 import './styles/scss/App.css';
 import './styles/scss/ModuleOverwrites.css';
+import Tooltip from './Components/Tooltip';
 
 class App extends Component {
   render() {
@@ -28,6 +29,8 @@ class App extends Component {
       <Button className="button-secondary" labelText="Yoooo"></Button>
       <Button labelText="Yoooo"></Button>
       <Slider minRange={0} maxRange={100}></Slider>
+
+      <Tooltip></Tooltip>
       <RadioButtonSet></RadioButtonSet>
       <CheckboxSet></CheckboxSet>
       <TextArea></TextArea>
