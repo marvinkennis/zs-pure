@@ -6,7 +6,7 @@ import {ic_file_download} from 'react-icons-kit/md/ic_file_download'
 import {ic_warning} from 'react-icons-kit/md/ic_warning'
 import {ic_close} from 'react-icons-kit/md/ic_close'
 
-class SystemMessage extends Component {
+class InlineMessage extends Component {
 // Initialize some props
  constructor(props){
      super(props);
@@ -14,14 +14,19 @@ class SystemMessage extends Component {
 
   render() {
     return (
-      <div class={"zs-system-message "+ this.props.messageType}>
-        <div class={this.props.messageType+"-icon"}><Icon size={24} icon={ic_warning}/></div>
+      <div>
+      <label>Text input label</label>
+      <div class={"zs-system-message short-message "+ this.props.messageType}>
         <p>{this.props.messageText}</p>
-        <div class="zs-system-message-icon"><Icon size={18} icon={ic_close}/></div>
+      </div>
+
+      <div class="zs-error-underline">
+        <p>error message</p>
+      </div>
       </div>
     );
   }
 }
 
 
-export default SystemMessage;
+export default InlineMessage;

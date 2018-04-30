@@ -1,6 +1,14 @@
 /* Brand color definitions - move this to core styling file later*/
 /*Buttons - move this to _button.scss later*/
 /* Text links */
+/*System messages */
+ul {
+  list-style: none; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
 .zs-button {
   background-color: #424496;
   width: 100px;
@@ -23,5 +31,209 @@
 
 .zs-button:hover {
   background-color: #6470E7; }
+
+.zs-system-message {
+  background: #FFFFFF;
+  border: 2px solid;
+  width: 600px;
+  border-radius: 1px;
+  padding: 4px 10px 4px 10px; }
+
+.zs-system-message > * {
+  display: inline-block; }
+
+.zs-system-message p {
+  line-height: 34px; }
+
+.zs-system-message-icon {
+  line-height: 34px; }
+
+.short-message {
+  width: 400px; }
+
+.warning {
+  border-color: #FFAB00; }
+
+.error {
+  border-color: #FF5230; }
+
+.confirmation {
+  border-color: #00B583; }
+
+.warning-icon {
+  color: #FFAB00; }
+
+.error-icon {
+  color: #FF5230; }
+
+.confirmation-icon {
+  color: #00B583; }
+
+#footer {
+  width: 100%; }
+
+#footer-top-bar {
+  background-color: #E9E9E9;
+  display: grid;
+  padding-left: 20px;
+  padding-right: 20px;
+  grid-template-columns: 2fr 2fr; }
+
+#footer-bottom-bar {
+  background-color: #424496;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 80px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), inset 0 4px 3px 0 rgba(0, 0, 0, 0.3); }
+
+ul.zs-footer-menu {
+  display: block;
+  float: right;
+  height: 10;
+  margin-right: 0;
+  width: 300px; }
+
+.zs-footer-menu li {
+  float: left;
+  line-height: 40px;
+  margin-left: 20px;
+  padding: 0; }
+
+.copyright-holder {
+  line-height: 80px;
+  margin: 0; }
+
+.zs-range-container {
+  display: grid;
+  width: 600px;
+  grid-template-columns: 1fr 8fr 1fr 1fr; }
+
+.zs-range-container > * {
+  text-align: center; }
+
+input[type=range] {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */ }
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; }
+
+input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 16px;
+  margin-top: -5px;
+  background: #424496;
+  cursor: pointer; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #424496;
+  border-radius: 10px; }
+
+.slider-value {
+  width: 60px; }
+
+.zs-image-graph-bg {
+  background-color: 'red';
+  width: 1000;
+  height: 400; }
+
+.zs-graph-background {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  margin-top: -300px;
+  z-index: -99999; }
+
+.zs-text-box {
+  /* Rectangle 4: */
+  background: #FFFFFF;
+  border: 1px solid #424496;
+  border-radius: 2px;
+  outline: none !important; }
+
+.zs-text-box:focus {
+  border: 1px solid #6FA9FF; }
+
+.zs-text-box:required {
+  border: 1px solid #FF5230; }
+
+.zs-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 18px; }
+
+/* Hide default HTML checkbox */
+.zs-toggle-switch input {
+  display: none; }
+
+/* The slider */
+.zs-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  border: 2px solid #434343;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s; }
+
+.zs-toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #434343;
+  -webkit-transition: .4s;
+  transition: .4s; }
+
+input:checked + .zs-toggle-slider {
+  background-color: white;
+  border: 2px solid #424496; }
+
+input:focus + .zs-toggle-slider {
+  box-shadow: 0 0 1px #2196F3; }
+
+input:checked + .zs-toggle-slider:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+  background-color: #424496; }
+
+/* Rounded sliders */
+.zs-toggle-slider.round {
+  border-radius: 34px; }
+
+.zs-toggle-slider.round:before {
+  border-radius: 50%; }
+
+.checkhandle {
+  background-color: blue; }
 
 /*# sourceMappingURL=App.css.map */

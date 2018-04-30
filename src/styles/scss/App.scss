@@ -1,10 +1,13 @@
 
 /* Brand color definitions - move this to core styling file later*/
+
+
 $primary-color: #424496;
 $secondary-color: #6470E7;
 $tertiary-color: #42B3B9;
 $disabled-color: #E9E9E9;
-
+$neutral-dark: #434343;
+$default-font-size:14;
 $button-text-color:#FFF;
 
 /*Buttons - move this to _button.scss later*/
@@ -16,6 +19,23 @@ $button-border-radius:68px;
 
 /* Text links */ 
 
+/*System messages */ 
+$warning-color:#FFAB00;
+$error-color:#FF5230;
+$confirmation-color:#00B583;
+$information-color: $primary-color;
+
+
+$page-safe-margins:20px;
+
+ul {
+    list-style:none;
+}
+
+p {
+    margin:0;
+    padding:0;
+}
 .zs-button {
     background-color:$primary-color;
     width:100px;
@@ -42,3 +62,251 @@ outline:none;
 .zs-button:hover{
     background-color:$secondary-color
 }
+
+.zs-system-message{
+    background: #FFFFFF;
+    border: 2px solid;
+    width:600px;
+    border-radius: 1px;
+    padding: 4px 10px 4px 10px;
+}
+
+
+.zs-system-message > * {
+    display:inline-block; 
+}
+
+.zs-system-message p {
+    line-height:34px;
+}
+
+.zs-system-message-icon {
+    line-height:34px;
+}
+
+
+.short-message {
+    width:400px;
+}
+
+.warning{
+    border-color:$warning-color;
+}
+
+.error{
+    border-color:$error-color
+}
+
+.confirmation{
+    border-color:$confirmation-color
+}
+
+.warning-icon{
+    color:$warning-color;
+}
+
+.error-icon{
+    color:$error-color
+}
+
+.confirmation-icon{
+    color:$confirmation-color
+}
+
+
+
+$navigation-bar-height:80px;
+
+#footer{
+    width:100%;
+}
+
+#footer-top-bar {
+    background-color:$disabled-color;
+    display:grid;
+    padding-left:$page-safe-margins;
+    padding-right:$page-safe-margins;
+    grid-template-columns: 2fr 2fr;
+}
+
+#footer-bottom-bar {
+    background-color:$primary-color;
+    color:white;    
+    padding-left:$page-safe-margins;
+    padding-right:$page-safe-margins;        
+    height:$navigation-bar-height;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50), inset 0 4px 3px 0 rgba(0,0,0,0.30);
+}
+
+ul.zs-footer-menu {
+    display:block;
+    float:right;
+    height:10;
+    margin-right:0;
+    width:300px;
+}
+.zs-footer-menu li {
+    float:left;
+    line-height:($navigation-bar-height/2);
+    margin-left:20px;
+    padding:0;
+}
+
+.copyright-holder {
+    line-height:$navigation-bar-height;
+    margin:0;
+}
+
+
+.zs-range-container{
+    display:grid;
+    width:600px;
+    grid-template-columns: 1fr 8fr 1fr 1fr;
+}
+
+.zs-range-container > *{
+    text-align:center;
+}
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    margin-top:-5px;
+    background: $primary-color;
+    cursor: pointer;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: $primary-color;
+    border-radius: 10px;
+  }
+
+  .slider-value {
+      width:60px;
+  }
+
+  .zs-image-graph-bg {
+      background-color:'red';
+      width:1000;
+      height:400;
+  }
+
+  .zs-graph-background {
+      position:absolute;
+      width:600px;
+      height:400px;
+      margin-top:-300px;
+      z-index:-99999;
+  }
+
+  .zs-text-box {
+      /* Rectangle 4: */
+    background: #FFFFFF;
+    border: 1px solid $primary-color;
+    border-radius: 2px;
+    outline: none !important;
+  }
+
+  .zs-text-box:focus {
+      border:1px solid $button-focus-border-color;
+  }
+
+  .zs-text-box:required {
+    border:1px solid $error-color;
+  }
+
+
+
+  .zs-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 18px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .zs-toggle-switch input {display:none;}
+  
+  /* The slider */
+  .zs-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    border:2px solid $neutral-dark;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .zs-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 2px;
+    bottom: 2px;
+    background-color: $neutral-dark;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .zs-toggle-slider {
+    background-color: white;
+
+    border:2px solid $primary-color;
+  }
+  
+  input:focus + .zs-toggle-slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .zs-toggle-slider:before {
+    -webkit-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    transform: translateX(12px);
+    background-color:$primary-color;
+  }
+  
+  /* Rounded sliders */
+  .zs-toggle-slider.round {
+    border-radius: 34px;
+  }
+  
+  .zs-toggle-slider.round:before {
+    border-radius: 50%;
+  }
+
+  .checkhandle{
+      background-color:blue;
+  }

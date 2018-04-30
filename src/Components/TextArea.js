@@ -11,7 +11,11 @@ class TextArea extends Component {
 
   render() {
     return (
-      <div></div>
+      <div>
+        <textarea class="zs-text-box" rows="4" cols="50">
+          Fuck this 
+        </textarea>
+      </div>
     );
   }
 }
