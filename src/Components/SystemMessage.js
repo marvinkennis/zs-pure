@@ -15,9 +15,9 @@ class SystemMessage extends Component {
   render() {
     return (
       <div class={"zs-system-message "+ this.props.messageType}>
-        <div class={this.props.messageType+"-icon"}><Icon size={24} icon={ic_warning}/></div>
+        <div class={"zs-system-message-icon "+ this.props.messageType+"-icon"}><Icon size={24} icon={ic_warning}/></div>
         <p>{this.props.messageText}</p>
-        <div class="zs-system-message-icon"><Icon size={18} icon={ic_close}/></div>
+        <div class="zs-system-close-icon"><Icon size={20} icon={ic_close}/></div>
       </div>
     );
   }

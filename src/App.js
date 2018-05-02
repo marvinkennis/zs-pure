@@ -11,36 +11,52 @@ import CheckboxSet from './Components/CheckboxSet';
 import TextArea from './Components/TextArea';
 import TextField from './Components/TextField';
 import Slider from './Components/Slider';
+import Header from './Components/Header';
 import Toggle from './Components/Toggle';
 import Cropper from 'react-cropper';
 
 
 import './styles/scss/App.css';
 import './styles/scss/ModuleOverwrites.css';
-import Tooltip from './Components/Tooltip';
 import BarGraph from './Components/BarGraph';
 import Heatmap from './Components/Heatmap';
+import ProgressTracker from './Components/ProgressTracker';
+import ProgressIndicator from './Components/ProgressIndicator';
+import ReactTooltip from 'react-tooltip'
 
 class App extends Component {
   render() {
     return (
       
       <div className="App">
-      
+      <h1>The quick brown fox jumps over the lazy dog</h1>
+      <h2>The quick brown fox jumps over the lazy dog</h2>
+      <h3>The quick brown fox jumps over the lazy dog</h3>
+      <h4>The quick brown fox jumps over the lazy dog</h4>
+      <h5>The quick brown fox jumps over the lazy dog</h5>
+      <p>The earliest known appearance of the phrase is from The Boston Journal. In an article titled "Current Notes" in the February 10, 1885 morning edition, the phrase is mentioned as a good practice sentence for writing students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter of the alphabet</p>
+      <p class="caption">Here is some example caption text</p>
+      <p class="legal">Here is some example legal text</p>
+      <a data-for='global' data-tip="React-tooltip"> ◕‿‿◕ </a>
+      <ReactTooltip place="right" border='true' id="global" class="zs-tooltip"  type="light" effect="solid"/>
       <Button labelText="Yoooo"></Button>
       <Button labelText="Yoooo" hasIcon={true}></Button>
+      <Button hasIcon={true}></Button>
       <Button className="button-secondary" labelText="Yoooo"></Button>
-      <Button labelText="Yoooo"></Button>
+      <Button labelText="Yoooo" disabled="btn-disabled"></Button>
+      <Header></Header>
       <Slider minRange={0} maxRange={100}></Slider>
-
-      <Tooltip></Tooltip>
+      <ProgressIndicator></ProgressIndicator>
       <RadioButtonSet></RadioButtonSet>
       <CheckboxSet></CheckboxSet>
       <TextArea></TextArea>
       <TextField readOnly={"true"}></TextField>
       <TextField labelText="Heyooooo" infoIcon={true} tooltipMessage={true}></TextField>
       <Toggle></Toggle>
+      <Toggle disabled="disabled"></Toggle>
       <SystemMessage messageType="warning" messageText="Yo warning here"></SystemMessage>
+      <SystemMessage messageType="confirmation" messageText="Yo warning here"></SystemMessage>
+      <SystemMessage messageType="error" messageText="Yo warning here"></SystemMessage>
       <InlineMessage messageType="error" messageText="Placeholder message text here"></InlineMessage>
       <Footer>
       </Footer>

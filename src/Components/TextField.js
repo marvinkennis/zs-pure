@@ -17,7 +17,7 @@ class TextField extends Component {
   if (labelText) {
     return (
     <div>
-    <label class="zs-input-label" >{labelText} {props.tooltipMessage ? <span style={{color:"FF0000"}}><Icon data-tip="hello world" class="zs-inline-icon" icon={ic_info}/><ReactTooltip class='zs-tooltip'/></span> : <div></div>}</label> 
+    <label class="zs-input-label" >{labelText} {props.tooltipMessage ? <span class="info-icon"><Icon data-tip="hello world" icon={ic_info}/><ReactTooltip class='zs-tooltip'/></span> : <div></div>}</label> 
     </div>)
   }
   return false

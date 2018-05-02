@@ -12,7 +12,8 @@ import {
   VerticalGridLines,
   HorizontalGridLines,
   VerticalBarSeries,
-  VerticalBarSeriesCanvas
+  VerticalBarSeriesCanvas,
+  DiscreteColorLegend
 }  from 'react-vis';
 
 class BarGraph extends React.Component {
@@ -24,6 +25,12 @@ class BarGraph extends React.Component {
     const {useCanvas} = this.state;
     const content = useCanvas ? 'TOGGLE TO SVG' : 'TOGGLE TO CANVAS';
     const BarSeries = useCanvas ? VerticalBarSeriesCanvas : VerticalBarSeries;
+    const ITEMS = [
+      'Hot seats',
+      'Lounge',
+      'Kitchen',
+
+    ];
     return (
       <div>
  
@@ -50,6 +57,11 @@ class BarGraph extends React.Component {
               {x: 'C', y: 11}
             ]}/>
         </XYPlot>
+        <DiscreteColorLegend
+      height={200}
+      width={300}
+      items={ITEMS}
+    />
       </div>
     );
   }

@@ -12,8 +12,8 @@ class Button extends Component {
 
   render() {
     return (
-      <label class="zs-toggle-switch">
-        <input type="checkbox"/>
+      <label class={"zs-toggle-switch " + this.props.disabled}>
+        <input type="checkbox" disabled={this.props.disabled}/>
         <span class="zs-toggle-slider round"></span>
       </label>
     );

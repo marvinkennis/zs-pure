@@ -12,7 +12,7 @@ class Button extends Component {
 
   render() {
     return (
-      <button className={"zs-button "+this.props.className}>
+      <button className={"zs-button "+this.props.className+" "+this.props.disabled} disabled={this.props.disabled}>
         {(this.props.hasIcon) ? <Icon icon={ic_file_download}/>: ''}
         {this.props.labelText}
       </button>

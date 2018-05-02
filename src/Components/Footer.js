@@ -16,9 +16,9 @@ class Footer extends Component {
         <div id="footer-top-bar">
           <h1 class="zs-logotype">Zensors</h1>
           <ul class="zs-footer-menu">
-            <li>About</li>
-            <li>Support</li>
-            <li>Contact</li>
+            <li class="footer-menu-item">About</li>
+            <li class="footer-menu-item">Support</li>
+            <li class="footer-menu-item">Contact</li>
           </ul>
         </div>
         <div id="footer-bottom-bar">
