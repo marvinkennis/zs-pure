@@ -14,7 +14,7 @@ class Footer extends Component {
     return (
       <div id="footer">
         <div id="footer-top-bar">
-          <h1 class="zs-logotype">Zensors</h1>
+          <h2 class="zs-logotype">Zensors</h2>
           <ul class="zs-footer-menu">
             <li class="footer-menu-item">About</li>
             <li class="footer-menu-item">Support</li>
@@ -22,9 +22,14 @@ class Footer extends Component {
           </ul>
         </div>
         <div id="footer-bottom-bar">
-          <p class="copyright-holder">
-          2018 - Carnegie Mellon University
-          </p> 
+          <div class="copyright-holder">
+            <p class="legal"> 2018 - Carnegie Mellon University</p>
+          </div> 
+
+          <ul class="zs-legal-menu">
+            <li class="footer-menu-item legal">Privacy</li>
+            <li class="footer-menu-item legal">Terms and conditions</li>
+          </ul>
         </div>
       </div>
     );

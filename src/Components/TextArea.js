@@ -9,6 +9,7 @@ class TextArea extends Component {
 // Initialize some props
  constructor(props){
      super(props);
+     this.state = {buttonIconStyle:{paddingTop:100, textAlign: 'center', display:'inline'}}
  }
 
  GenerateLabel = (props) => {
@@ -17,7 +18,7 @@ class TextArea extends Component {
   if (labelText) {
     return (
     <div>
-    <label class="zs-input-label" >{labelText} {props.tooltipMessage ? <span style={{color:"FF0000"}}><Icon data-tip="hello world" class="zs-inline-icon" icon={ic_info}/><ReactTooltip styleName="tooltip" type="light"/></span> : <div></div>}</label> 
+    <label class="zs-input-label" >{labelText} {props.tooltipMessage ? <span style={{color:"FF0000"}}><Icon style={this.state.buttonIconStyle} data-tip="hello world" icon={ic_info}/><ReactTooltip styleName="tooltip" type="light"/></span> : <div></div>}</label> 
     </div>)
   }
   return false
