@@ -28,7 +28,13 @@ class App extends Component {
   render() {
     return (
       
-      <div className="App">
+        <div className="App">
+            <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
       <h1>The quick brown fox jumps over the lazy dog</h1>
       <h2>The quick brown fox jumps over the lazy dog</h2>
       <h3>The quick brown fox jumps over the lazy dog</h3>
