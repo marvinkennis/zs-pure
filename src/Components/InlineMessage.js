@@ -11,6 +11,7 @@ class InlineMessage extends Component {
 // Initialize some props
  constructor(props){
      super(props);
+     this.state = {buttonIconStyle:{paddingTop:100, textAlign: 'center', display:'inline', marginRight:5}}
  }
 
   render() {
@@ -22,7 +23,7 @@ class InlineMessage extends Component {
       </div>
 
       <div class="zs-error-underline">
-        <span class="inline-icon error-icon"><Icon icon={ic_error}/></span>
+        <span class="inline-icon error-icon"><Icon style={this.state.buttonIconStyle} icon={ic_error}/></span>
         <p class="error-msg-text">error message</p>
       </div>
       </div>

@@ -19,8 +19,14 @@ class Header extends Component {
     return (
 
       <div>
+      <input type="checkbox" value="flipmenu" id="burgerActive"/>
       <div id="main-header">
-        <div id="logo-container"><h2>ZENSORS</h2></div> 
+        <div id="logo-container"><h2>ZENSORS</h2>
+          <div id="burger-holder">
+            <div class="burger-icon"><a id="nav-toggle" href="#"><span></span></a></div>
+          
+           </div>
+        </div> 
         <div id="header-right-container">
         <div id="header-menu">
           <ul>

@@ -402,6 +402,14 @@ input[type=range] {
       border:1px solid black !important;
       background-color:white !important;
   }
+
+  .zs-tooltip.place-top:after {
+    border-left: 8px solid transparent !important;
+    border-right: 8px solid transparent !important;
+    bottom: -6px !important;
+    margin-left: -8px !important;
+    border-bottom-width: 6px !important;
+    }
   /* The slider */
   .zs-toggle-slider {
     position: absolute;
@@ -575,6 +583,7 @@ ul.zs-footer-menu, ul.zs-legal-menu {
 .footer-menu-item.legal{
     width:120px;
     color:white;
+    opacity:0.7;
     margin-right:20px;
 
 }
@@ -625,7 +634,7 @@ ul.zs-footer-menu, ul.zs-legal-menu {
     line-height:40px;
     margin-top:20px;
     float:right;
-    border-left:1px solid rgba(202, 202, 202, 0.4);
+    border-left:1px solid rgb(233, 233, 233);
 }
 
 #header-controls ul, #header-menu ul {
@@ -693,6 +702,7 @@ max-height:$navigation-bar-height;
     border-top: 5px solid background-color !important;
   }
 
+
   @media only screen and (max-width: 900px) {
 
     #main-header {
@@ -703,7 +713,7 @@ max-height:$navigation-bar-height;
         clear:both;
         display:block;
         overflow:hidden;
-        background-color:rgba(255,0,0,0.06);
+
     }
     
     #main-header > * {
@@ -713,8 +723,7 @@ max-height:$navigation-bar-height;
     #logo-container {
         width:100%;
         height:100%;
-        background-color:rgba(255,255,0,0.06);
-        border-bottom:1px solid grey;
+        border-bottom:1px solid rgb(223, 223, 223);
         clear:both;
 
     }
@@ -723,7 +732,6 @@ max-height:$navigation-bar-height;
         padding:0;
         display:inline-block;
         width:200px;
-        background-color:green;
         
         margin:0;
         line-height:$navigation-bar-height;
@@ -749,7 +757,9 @@ max-height:$navigation-bar-height;
         line-height:40px;
         margin-top:20px;
         clear:both;
-        border-left:1px solid rgba(202, 202, 202, 0.4);
+        border-top:1px solid rgba(202, 202, 202, 0.4);
+        padding-top:20px;
+        padding-bottom:20px;
     }
 
     
@@ -762,6 +772,8 @@ max-height:$navigation-bar-height;
 
     #header-controls > ul{
         display:grid;
+        padding-left:20px;
+        padding-bottom:40px;
         grid-template-columns:1fr 1fr;
         justify-content: space-around;
     }
@@ -804,6 +816,7 @@ max-height:$navigation-bar-height;
         display:block;
         overflow:hidden;
     }
+
     .zs-logotype {
         width:100%;
         clear:both;
@@ -812,4 +825,110 @@ max-height:$navigation-bar-height;
     .footer-menu-item {
         margin-bottom:40px;
     }
+
+    /* Default State */
+ #burger-holder {
+    width: 50px;
+    margin-top:15px;
+    margin-right:15px;
+    height: 50px;
+    float:right;
+    line-height: 100px;
+    color: white;
+    text-align: center;
+ }
+
+.burger-icon {
+    margin-left:15px;
+    margin-top:22px;
 }
+#nav-toggle span, 
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 20px;
+  background: black;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -7px;
+}
+#nav-toggle span:after {
+  bottom: -7px; 
+}
+}
+
+
+
+
+
+// Okay legit CSS now
+.special-text {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Show the tooltip on hover */
+  .special-text:hover .special-text__tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .special-text__tooltip {
+    font-size: 14px;
+    
+    position: absolute;
+    background-color:white;
+    width: 150px;
+    margin-left:-77px;
+    line-height:20px;
+    left: 0%;
+    bottom: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    
+    /* Hide the tooltip by default */
+    visibility: hidden;
+    opacity: 0;
+    
+    /* Prettify */
+    text-align: left;
+
+  }
+  
+  /* The bordered part of the triangle */
+  $border-width: 10px;
+  
+  .special-text__tooltip::before,
+  .special-text__tooltip::after {
+    content: "";
+    position: absolute;
+    border-left: $border-width solid transparent;
+    border-right: $border-width solid transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -$border-width;
+  }
+  
+  .special-text__tooltip::before {
+    border-top: $border-width solid #000;
+    margin-top: 0px;
+  }
+  
+  /* The white fill of the triangle */
+  .special-text__tooltip::after {
+    border-top: $border-width solid white;
+    margin-top: -2px;
+    z-index: 1;
+  }
+
+
+ 
+ 
+ 

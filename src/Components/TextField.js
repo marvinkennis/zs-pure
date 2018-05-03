@@ -9,6 +9,7 @@ class TextField extends Component {
 // Initialize some props
  constructor(props){
      super(props);
+     this.state = {buttonIconStyle:{paddingTop:100, textAlign: 'center', display:'inline', marginRight:100}}
  }
 
  GenerateLabel = (props) => {
@@ -17,7 +18,9 @@ class TextField extends Component {
   if (labelText) {
     return (
     <div>
-    <label class="zs-input-label" >{labelText} {props.tooltipMessage ? <span class="info-icon"><Icon data-tip="hello world" icon={ic_info}/><ReactTooltip class='zs-tooltip'/></span> : <div></div>}</label> 
+    <label class="zs-input-label" >{labelText} {props.tooltipMessage ? <span class="info-icon special-text"><Icon style={this.state.buttonIconStyle} data-tip="hello world" icon={ic_info}/>      <span class="special-text__tooltip">
+        Example of a tooltip with text in pure CSS
+      </span></span> : <div></div>}</label> 
     </div>)
   }
   return false

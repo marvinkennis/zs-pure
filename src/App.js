@@ -37,8 +37,6 @@ class App extends Component {
       <p>The earliest known appearance of the phrase is from The Boston Journal. In an article titled "Current Notes" in the February 10, 1885 morning edition, the phrase is mentioned as a good practice sentence for writing students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter of the alphabet</p>
       <p class="caption">Here is some example caption text</p>
       <p class="legal">Here is some example legal text</p>
-      <a data-for='global' data-tip="React-tooltip"> ◕‿‿◕ </a>
-      <ReactTooltip place="right" border='true' id="global" class="zs-tooltip"  type="light" effect="solid"/>
       <Button labelText="Yoooo"></Button>
       <Button labelText="Yoooo" hasIcon={true}></Button>
       <Button hasIcon={true}></Button>
