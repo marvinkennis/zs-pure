@@ -708,4 +708,15 @@ ul.zs-footer-menu, ul.zs-legal-menu {
   margin-top: -2px;
   z-index: 1; }
 
+.next-bridge {
+  height: 32px;
+  margin-left: 29px;
+  position: absolute;
+  margin-top: 36px;
+  background-color: #767676;
+  width: 3px; }
+
+.filled {
+  background-color: #424496; }
+
 /*# sourceMappingURL=App.css.map */

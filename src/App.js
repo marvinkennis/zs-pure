@@ -20,7 +20,7 @@ import './styles/scss/App.css';
 import './styles/scss/ModuleOverwrites.css';
 import BarGraph from './Components/BarGraph';
 import Heatmap from './Components/Heatmap';
-import ProgressTracker from './Components/ProgressTracker';
+import ProgressTrackerVV from './Components/ProgressTrackerVV';
 import ProgressIndicator from './Components/ProgressIndicator';
 import ReactTooltip from 'react-tooltip'
 
@@ -44,7 +44,7 @@ class App extends Component {
       <Button labelText="Yoooo" disabled="btn-disabled"></Button>
       <Header></Header>
       <Slider minRange={0} maxRange={100}></Slider>
-      <ProgressIndicator></ProgressIndicator>
+      <ProgressTrackerVV></ProgressTrackerVV>
       <RadioButtonSet></RadioButtonSet>
       <CheckboxSet></CheckboxSet>
       <TextArea></TextArea>
