@@ -146,6 +146,9 @@ p {
 .warning {
   border-color: #FFAB00; }
 
+.information {
+  border-color: #424496; }
+
 .error {
   border-color: #FF5230; }
 

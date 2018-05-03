@@ -26,7 +26,40 @@ import Heatmap from '../src/Components/Heatmap';
 import ProgressTracker from '../src/Components/ProgressTracker';
 import ProgressIndicator from '../src/Components/ProgressIndicator';
 import ReactTooltip from 'react-tooltip'
+import BrandColors from '../src/Components/BrandColors';
+import SupportColors from '../src/Components/SupportColors';
+import NeutralColors from '../src/Components/NeutralColors';
 
+
+storiesOf('Colors', module)
+  .add('Brand colors', () => (
+    <BrandColors></BrandColors>
+  )) 
+  .add('Support colors', () => (
+    <SupportColors></SupportColors>
+  )) 
+  .add('Neutral colors', () => (
+    <NeutralColors></NeutralColors>
+  )) 
+
+storiesOf('Typography', module)
+  .add('Headers', () => (
+      <div>
+    <h1>The quick brown fox jumps over the lazy dog</h1>
+    <h2>The quick brown fox jumps over the lazy dog</h2>
+    <h3>The quick brown fox jumps over the lazy dog</h3>
+    <h4>The quick brown fox jumps over the lazy dog</h4>
+    <h5>The quick brown fox jumps over the lazy dog</h5></div>
+  )) 
+  .add('Paragraphs', () => (
+    <p>The earliest known appearance of the phrase is from The Boston Journal. In an article titled "Current Notes" in the February 10, 1885 morning edition, the phrase is mentioned as a good practice sentence for writing students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter of the alphabet</p>
+  )) 
+  .add('Caption', () => (
+    <p class="caption">The earliest known appearance of the phrase is from The Boston Journal. In an article titled "Current Notes" in the February 10, 1885 morning edition, the phrase is mentioned as a good practice sentence for writing students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter of the alphabet</p>
+  )) 
+  .add('Legal', () => (
+    <p class="legal">The earliest known appearance of the phrase is from The Boston Journal. In an article titled "Current Notes" in the February 10, 1885 morning edition, the phrase is mentioned as a good practice sentence for writing students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter of the alphabet</p>
+  )) 
 
 storiesOf('Page elements', module)
   .add('Header', () => (
