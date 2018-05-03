@@ -19,7 +19,6 @@ class Header extends Component {
     return (
 
       <div>
-      <input type="checkbox" value="flipmenu" id="burgerActive"/>
       <div id="main-header">
         <div id="logo-container"><h2>ZENSORS</h2>
           <div id="burger-holder">

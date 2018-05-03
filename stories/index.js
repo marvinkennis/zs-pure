@@ -79,11 +79,11 @@ storiesOf('Control elements', module)
 
 storiesOf('Text inputs', module)
   .add('Text field plain', () => (
-    <TextField labelText="Heyooooo" ></TextField>
+    <TextField labelText="Text field label" ></TextField>
   )) 
 
   .add('Text field with info tooltip', () => (
-    <TextField labelText="Heyooooo" infoIcon={true} tooltipMessage={true}></TextField>
+    <TextField labelText="Text field label" infoIcon={true} tooltipMessage={true}></TextField>
   )) 
 
   .add('Text field disabled', () => (
@@ -119,11 +119,11 @@ storiesOf('Text inputs', module)
 
   storiesOf('Buttons', module)
   .add('Primary', () => (
-    <Button labelText="Yoooo"></Button>
+    <Button labelText="Button text"></Button>
   )) 
 
   .add('Primary with icon', () => (
-    <Button labelText="Yoooo" hasIcon={true}></Button>
+    <Button labelText="Button text" hasIcon={true}></Button>
   )) 
 
   .add('Icon only', () => (
@@ -131,11 +131,11 @@ storiesOf('Text inputs', module)
   )) 
 
   .add('Secondary', () => (
-    <Button className="button-secondary" labelText="Yoooo"></Button>
+    <Button className="button-secondary" labelText="Button text"></Button>
   )) 
 
   .add('Disabled', () => (
-    <Button labelText="Yoooo" disabled="btn-disabled"></Button>
+    <Button labelText="Disabled button" disabled="btn-disabled"></Button>
   )) 
 
   storiesOf('Data visualization', module)

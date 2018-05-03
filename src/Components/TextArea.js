@@ -31,7 +31,7 @@ class TextArea extends Component {
       <div>
         <this.GenerateLabel labelText={this.props.labelText} tooltipMessage={this.props.tooltipMessage}/>
         <textarea class="zs-text-box" rows="4" cols="50">
-          Fuck this 
+
         </textarea>
       </div>
     );
