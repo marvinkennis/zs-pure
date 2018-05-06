@@ -28,9 +28,9 @@ class TextField extends Component {
   render() {
 
     return (
-      <div>
+      <div style={{paddingTop: 75+'px'}}>
         <this.GenerateLabel labelText={this.props.labelText} tooltipMessage={this.props.tooltipMessage}/>
-        <input type="text" class="zs-text-box"></input>
+        <input type="text" class="zs-text-box" readOnly={this.props.readOnly} disabled={this.props.readOnly}></input>
       </div>
     );
   }

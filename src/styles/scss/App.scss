@@ -52,7 +52,7 @@ h5 {
     font-weight:$h200-font-weight;
     line-height:$h200-line-height;
 }
-$h100-font-size:14px;
+$h100-font-size:12px;
 $h100-font-weight:'regular';
 $h100-line-height:16px;
 h6 {
@@ -558,7 +558,7 @@ input[type=range] {
     padding-right:$page-safe-margins;        
     height:$navigation-bar-height;
     display:grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 220px 1fr;
 }
 
 .copyright-holder p{

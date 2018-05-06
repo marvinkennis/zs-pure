@@ -3,6 +3,7 @@ import React, { Component} from 'react';
 import { Icon } from 'react-icons-kit'
 import '../styles/scss/App.css';
 import {ic_file_download} from 'react-icons-kit/md/ic_file_download'
+import {ic_copyright} from 'react-icons-kit/md/ic_copyright'
 
 class Footer extends Component {
 // Initialize some props
@@ -11,6 +12,7 @@ class Footer extends Component {
  }
 
   render() {
+
     return (
       <div id="footer">
         <div id="footer-top-bar">
@@ -23,7 +25,7 @@ class Footer extends Component {
         </div>
         <div id="footer-bottom-bar">
           <div class="copyright-holder">
-            <p class="legal"> 2018 - Carnegie Mellon University</p>
+            <p class="legal"><Icon size={11} icon={ic_copyright}/> 2018 - Carnegie Mellon University</p>
           </div> 
 
           <ul class="zs-legal-menu">

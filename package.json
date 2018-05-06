@@ -23,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "storybook": "start-storybook -p 9001",
+    "build-static-storybook": "build-storybook -c .storybook -o storybook-out",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

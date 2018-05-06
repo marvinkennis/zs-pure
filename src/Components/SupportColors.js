@@ -12,8 +12,16 @@ import {
 class SupportColors extends Component {
   state = {
     value: false,
-    myPalette: ['#FF5230', '#6470E7', '#6FA9FF', '#00B583', '#FFAB00']
+    paletteLabel: ['Support-01', 'Support-02', 'Support-03', 'UI-01', 'UI-02'],
+    myPalette: ['#FF5230', '#FFAB00', '#00B583', '#6FA9FF', '#6470E7']
   }
+
+  constructTooltip(v) {
+    var colorIndex = parseInt(v.color);
+    return {name: this.state.paletteLabel[colorIndex],
+            code: this.state.myPalette[colorIndex]};
+  }
+
   render() {
     const {value} = this.state;
     return (
@@ -33,7 +41,7 @@ class SupportColors extends Component {
 
 
         ]}
-        onValueMouseOver={v => this.setState({value: v})}
+        onValueMouseOver={v => this.setState({value: this.constructTooltip(v)})}
         onSeriesMouseOut={v => this.setState({value: false})}
         width={300}
         height={300}>

@@ -12,8 +12,16 @@ import {
 class NeutralColors extends Component {
   state = {
     value: false,
-    myPalette: ['#000000', '#434343', '#767676', '#E9E9E9', '#FFFFFF']
+    paletteLabel: ['Neutral-01', 'Neutral-02', 'Neutral-03', 'Neutral-04', 'Neutral-05'],
+    myPalette: ['#FFFFFF', '#E9E9E9', '#767676', '#434343', '#000000']
   }
+
+  constructTooltip(v) {
+    var colorIndex = parseInt(v.color);
+    return {name: this.state.paletteLabel[colorIndex],
+            code: this.state.myPalette[colorIndex]};
+  }
+
   render() {
     const {value} = this.state;
     return (
@@ -33,7 +41,7 @@ class NeutralColors extends Component {
 
 
         ]}
-        onValueMouseOver={v => this.setState({value: v})}
+        onValueMouseOver={v => this.setState({value: this.constructTooltip(v)})}
         onSeriesMouseOut={v => this.setState({value: false})}
         width={300}
         height={300}>

@@ -46,19 +46,117 @@ storiesOf('Typography', module)
   .add('Headers', () => (
       <div>
     <h1>The quick brown fox jumps over the lazy dog</h1>
+
+    <p>
+        H600 <br/>
+        font-size: 36px (2.25em) <br/>
+        font-weight: light (300) <br/>
+        line-height: 45px (1.25)
+    </p>
+
+    <br/><br/>
+
     <h2>The quick brown fox jumps over the lazy dog</h2>
+
+    <p>
+        H500 <br/>
+        font-size: 24px (1.5em) <br/>
+        font-weight: light (300) <br/>
+        line-height: 30px (1.25)
+    </p>
+
+    <br/><br/>
+
+
     <h3>The quick brown fox jumps over the lazy dog</h3>
+
+    <p>
+        H400 <br/>
+        font-size: 20px (1.25em) <br/>
+        font-weight: light (300) <br/>
+        line-height: 25px (1.25)
+    </p>
+
+    <br/><br/>
+
+
     <h4>The quick brown fox jumps over the lazy dog</h4>
-    <h5>The quick brown fox jumps over the lazy dog</h5></div>
+
+    <p>
+        H300 <br/>
+        font-size: 18px (1.125em) <br/>
+        font-weight: regular (400) <br/>
+        line-height: 23px (1.25)
+    </p>
+
+    <br/><br/>
+
+
+    <h5>The quick brown fox jumps over the lazy dog</h5>
+
+    <p>
+        H200 <br/>
+        font-size: 14px (0.875em) <br/>
+        font-weight: regular (400) <br/>
+        line-height: 18px (1.25)
+    </p>
+
+    <br/><br/>
+
+
+    <h6>The quick brown fox jumps over the lazy dog</h6>
+
+    <p>
+        H100 <br/>
+        font-size: 14px (0.75em) <br/>
+        font-weight: regular (400) <br/>
+        line-height: 16px (1.25)
+    </p>
+
+    <br/><br/>
+
+  </div>
   )) 
-  .add('Paragraphs', () => (
+  .add('Paragraph', () => (
+    <div>
     <p>The earliest known appearance of the phrase is from The Boston Journal. In an article titled "Current Notes" in the February 10, 1885 morning edition, the phrase is mentioned as a good practice sentence for writing students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter of the alphabet</p>
+  
+
+    <br/>
+
+    <p> p <br/>
+        font-size: 14px (0.875em) <br/>
+        font-weight: regular (400) <br/>
+        line-height: 21px (1.5) <br/>
+    </p>
+    </div>
   )) 
   .add('Caption', () => (
+    <div>
     <p class="caption">The earliest known appearance of the phrase is from The Boston Journal. In an article titled "Current Notes" in the February 10, 1885 morning edition, the phrase is mentioned as a good practice sentence for writing students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter of the alphabet</p>
+  
+
+    <br/>
+
+    <p> Caption <br/>
+        font-size: 12px (0.75em) <br/>
+        font-weight: regular (400) <br/>
+        line-height: 28px (1.5) <br/>
+    </p>
+    </div>
   )) 
   .add('Legal', () => (
+    <div>
     <p class="legal">The earliest known appearance of the phrase is from The Boston Journal. In an article titled "Current Notes" in the February 10, 1885 morning edition, the phrase is mentioned as a good practice sentence for writing students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter of the alphabet</p>
+
+    <br/>
+
+    <p> Legal <br/>
+        font-size: 11px (0.6875em) <br/>
+        font-weight: regular (400) <br/>
+        line-height: 17px (1.5) <br/>
+    </p>
+    </div>
   )) 
 
 storiesOf('Page elements', module)
@@ -87,11 +185,11 @@ storiesOf('Text inputs', module)
   )) 
 
   .add('Text field disabled', () => (
-    <TextField readOnly={"true"}></TextField>
+    <TextField labelText="Disabled text field" readOnly={true}></TextField>
   )) 
 
   .add('Text area', () => (
-    <TextArea></TextArea>
+    <TextArea labelText="Text area label"></TextArea>
   )) 
 
 

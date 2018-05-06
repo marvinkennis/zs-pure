@@ -28,7 +28,7 @@ class TextArea extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{paddingTop: 75+'px'}}>
         <this.GenerateLabel labelText={this.props.labelText} tooltipMessage={this.props.tooltipMessage}/>
         <textarea class="zs-text-box" rows="4" cols="50">
 

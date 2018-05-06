@@ -12,8 +12,16 @@ import {
 class BrandColors extends Component {
   state = {
     value: false,
-    myPalette: ['#2DEDD0', '#424496', '#42B3B9']
+    paletteLabel: ['Brand-01', 'Brand-02', 'Brand-03'],
+    myPalette: ['#2DEDD0', '#42B3B9', '#424496']
   }
+
+  constructTooltip(v) {
+    var colorIndex = parseInt(v.color);
+    return {name: this.state.paletteLabel[colorIndex],
+            code: this.state.myPalette[colorIndex]};
+  }
+
   render() {
     const {value} = this.state;
     return (
@@ -31,7 +39,7 @@ class BrandColors extends Component {
 
 
         ]}
-        onValueMouseOver={v => this.setState({value: v})}
+        onValueMouseOver={v => this.setState({value: this.constructTooltip(v)})}
         onSeriesMouseOut={v => this.setState({value: false})}
         width={300}
         height={300}>

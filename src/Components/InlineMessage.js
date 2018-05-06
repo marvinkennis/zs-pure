@@ -5,7 +5,7 @@ import '../styles/scss/App.css';
 import {ic_file_download} from 'react-icons-kit/md/ic_file_download'
 import {ic_warning} from 'react-icons-kit/md/ic_warning'
 import {ic_close} from 'react-icons-kit/md/ic_close'
-import {ic_error} from 'react-icons-kit/md/ic_error'
+import {withCross} from 'react-icons-kit/entypo/withCross'
 
 class InlineMessage extends Component {
 // Initialize some props
@@ -23,7 +23,7 @@ class InlineMessage extends Component {
       </div>
 
       <div class="zs-error-underline">
-        <span class="inline-icon error-icon"><Icon style={this.state.buttonIconStyle} icon={ic_error}/></span>
+        <span class="inline-icon error-icon"><Icon style={this.state.buttonIconStyle} icon={withCross}/></span>
         <p class="error-msg-text">error message</p>
       </div>
       </div>
